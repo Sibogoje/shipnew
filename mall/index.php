@@ -157,7 +157,7 @@ if (isset($_POST['savenew'])){
               </div>
               <!-- Table with stripped rows -->
 <div class="col-md-6 text-end">
-              <button style="margin-top: 10px; margin-bottom: 10px;" name="savenew" type="submit" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable" data-link="" title="View" class="btn btn-success" data-id=""><i class="bi bi-plus-square"></i>Add New</button>
+              <button style="margin-top: 10px; margin-bottom: 10px;" type="button" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable" data-link="" title="View" class="btn btn-success" data-id=""><i class="bi bi-plus-square"></i>Add New</button>
               </div>
               </div>
                <div class="table-responsive">
