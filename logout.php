@@ -17,7 +17,7 @@ $updatesession->execute();
     unset($_SESSION);
     session_destroy();
 
-header('Location:https://super.shippii.online');
+header('Location: https://super.shippii.online');
 }
 
 ?>
