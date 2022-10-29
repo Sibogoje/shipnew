@@ -148,8 +148,8 @@ if (isset($_POST['savenew'])){
                   <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Store Name</th>
-                    <th scope="col">Logo</th>
                     <th scope="col">Link</th>
+                    <th scope="col">Logo</th>
                     
           <th scope="col" >Action</th>
                   </tr>
