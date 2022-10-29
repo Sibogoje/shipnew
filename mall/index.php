@@ -178,7 +178,7 @@ while($row = $result->fetch_assoc()) {
                     <td><?php echo $row['link'];  ?></td>
                     <td><?php echo $row['logo']; ?></td>
           <td>
-  <button type="button" data-link="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-primary edit"  title="Edit" 
+  <button type="button"  class="btn btn-outline-primary edit"  title="Edit" 
 			data-id="<?php echo $row['id']; ?>"
 			data-name="<?php echo $row['name']; ?>"
 			data-link="<?php echo $row['link']; ?>"
