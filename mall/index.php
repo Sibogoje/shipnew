@@ -23,7 +23,19 @@ if (isset($_POST['savenew'])){
   }else{
   
   }
-
+  if (isset($_POST['delete'])){
+	  $id = $_POST['id'];
+    $stmt = $conn->prepare("DELETE FROM `mall` where `id`='$id' ");
+    $stmt->execute();
+    
+    //echo "New records created successfully";
+    header ('Location: index.php');
+    $stmt->close();
+    $conn->close();
+    }else{
+    
+    }
+    
 ?>
 <html lang="en">
 
