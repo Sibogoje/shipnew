@@ -1,7 +1,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="https://new.shippii.online/super/dash.php" class="logo d-flex align-items-center">
+      <a href="https://super.shippii.online/dash.php" class="logo d-flex align-items-center">
         <!--img src="icon.png" alt=""-->
         <span class="d-none d-lg-block">Shippii</span>
       </a>
@@ -95,7 +95,7 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="https://new.shippii.online/super/icon.png" alt="Profile" class="rounded-circle">
+            <img src="https://super.shippii.online/icon.png" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -150,7 +150,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="https://new.shippii.online/super/dash.php">
+        <a class="nav-link " href="https://super.shippii.online/dash.php">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -162,27 +162,27 @@
         </a>
         <ul id="shipstar-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="https://new.shippii.online/super/shipstar/index.php">
+            <a href="https://super.shippii.online/shipstar/index.php">
               <i class="bi bi-circle"></i><span>All Orders</span>
             </a>
           </li>
           <li>
-             <a href="https://new.shippii.online/super/shipstar/new.php">
+             <a href="https://super.shippii.online/shipstar/new.php">
               <i class="bi bi-circle"></i><span>New Orders</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/shipstar/assigned.php">
+            <a href="https://super.shippii.online/shipstar/assigned.php">
               <i class="bi bi-circle"></i><span>Assigned To</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/shipstar/arrived.php">
+            <a href="https://super.shippii.online/shipstar/arrived.php">
               <i class="bi bi-circle"></i><span>Checked Into Locker</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/shipstar/history.php">
+            <a href="https://super.shippii.online/shipstar/history.php">
               <i class="bi bi-circle"></i><span>History</span>
             </a>
           </li>
@@ -197,27 +197,27 @@
         </a>
         <ul id="bookings-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="https://new.shippii.online/super/warehouse/index.php">
+            <a href="https://super.shippii.online/warehouse/index.php">
               <i class="bi bi-circle"></i><span>All Orders</span>
             </a>
           </li>
           <li>
-             <a href="https://new.shippii.online/super/warehouse/new.php">
+             <a href="https://super.shippii.online/warehouse/new.php">
               <i class="bi bi-circle"></i><span>Requested</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/warehouse/ready.php">
+            <a href="https://super.shippii.online/warehouse/ready.php">
               <i class="bi bi-circle"></i><span>Ready For Processing</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/warehouse/checked.php">
+            <a href="https://super.shippii.online/warehouse/checked.php">
               <i class="bi bi-circle"></i><span>Checked Into Locker</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/warehouse/all.php">
+            <a href="https://super.shippii.online/warehouse/all.php">
               <i class="bi bi-circle"></i><span>History</span>
             </a>
           </li>
@@ -233,24 +233,24 @@
         </a>
         <ul id="warehouse-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="https://new.shippii.online/super/warehouse/index.php">
+            <a href="https://super.shippii.online/warehouse/index.php">
               <i class="bi bi-circle"></i><span>All Orders</span>
             </a>
           </li>
           <li>
-             <a href="https://new.shippii.online/super/warehouse/new.php">
+             <a href="https://super.shippii.online/warehouse/new.php">
               <i class="bi bi-circle"></i><span>New Orders</span>
             </a>
           </li>
           
           
           <li>
-            <a href="https://new.shippii.online/super/warehouse/checked.php">
+            <a href="https://super.shippii.online/warehouse/checked.php">
               <i class="bi bi-circle"></i><span>Checked Into Locker</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/warehouse/history.php">
+            <a href="https://super.shippii.online/warehouse/history.php">
               <i class="bi bi-circle"></i><span>History</span>
             </a>
           </li>
@@ -265,57 +265,57 @@
         </a>
         <ul id="locker-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="https://new.shippii.online/super/locker/index.php">
+            <a href="https://super.shippii.online/locker/index.php">
               <i class="bi bi-circle"></i><span>All Orders</span>
             </a>
           </li>
           <li>
-             <a href="https://new.shippii.online/super/locker/new.php">
+             <a href="https://super.shippii.online/locker/new.php">
               <i class="bi bi-circle"></i><span>New Orders</span>
             </a>
           </li>
 		      <li>
-            <a href="https://new.shippii.online/super/locker/wait.php">
+            <a href="https://super.shippii.online/locker/wait.php">
               <i class="bi bi-circle"></i><span>Wait</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/locker/collect.php">
+            <a href="https://super.shippii.online/locker/collect.php">
               <i class="bi bi-circle"></i><span>Collect</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/locker/deliver.php">
+            <a href="https://super.shippii.online/locker/deliver.php">
               <i class="bi bi-circle"></i><span>Deliver</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/locker/transit.php">
+            <a href="https://super.shippii.online/locker/transit.php">
               <i class="bi bi-circle"></i><span>In Transit</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/locker/sa.php">
+            <a href="https://super.shippii.online/locker/sa.php">
               <i class="bi bi-circle"></i><span>Shippii SA</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/locker/botswana.php">
+            <a href="https://super.shippii.online/locker/botswana.php">
               <i class="bi bi-circle"></i><span>BW Depot</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/locker/eswatini.php">
+            <a href="https://super.shippii.online/locker/eswatini.php">
               <i class="bi bi-circle"></i><span>Esw Depot</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/locker/delivered.php">
+            <a href="https://super.shippii.online/locker/delivered.php">
               <i class="bi bi-circle"></i><span>Delivered</span>
             </a>
           </li>
           <li>
-            <a href="https://new.shippii.online/super/locker/driver.php">
+            <a href="https://super.shippii.online/locker/driver.php">
               <i class="bi bi-circle"></i><span>Assigned to</span>
             </a>
           </li>
@@ -330,14 +330,14 @@
  
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="https://new.shippii.online/super/files/index.php">
+        <a class="nav-link collapsed" href="https://super.shippii.online/files/index.php">
           <i class="bi bi-question-octagon"></i><span>Manage Files </span><i class="bi bi- ms-auto"></i>
         </a>
 
       </li><!-- End Charts Nav -->
 
        <li class="nav-item">
-        <a class="nav-link collapsed" href="https://new.shippii.online/super/mall/index.php">
+        <a class="nav-link collapsed" href="https://super.shippii.online/mall/index.php">
           <i class="bi bi-question-octagon"></i><span>Shippii Mall </span><i class="bi bi- ms-auto"></i>
         </a>
 
@@ -365,12 +365,12 @@
         <ul id="settings-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 
           <li>
-            <a href="https://new.shippii.online/super/config/calculator.php">
+            <a href="https://super.shippii.online/config/calculator.php">
               <i class="bi bi-circle"></i><span>Calculator</span>
             </a>
           </li>
 		   <li>
-           <a href="https://new.shippii.online/super/config/promotions.php">
+           <a href="https://super.shippii.online/config/promotions.php">
               <i class="bi bi-circle"></i><span>Promotions</span>
             </a>
           </li>
@@ -388,22 +388,22 @@
         <ul id="users-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 
           <li>
-            <a href="https://new.shippii.online/super/users/admin.php">
+            <a href="https://super.shippii.online/users/admin.php">
               <i class="bi bi-circle"></i><span>Admin (SuperUser)</span>
             </a>
           </li>
 		   <li>
-            <a href="https://new.shippii.online/super/users/clerk.php">
+            <a href="https://super.shippii.online/users/clerk.php">
               <i class="bi bi-circle"></i><span>Admin (Clerk)</span>
             </a>
           </li>
 		   <li>
-            <a href="https://new.shippii.online/super/users/drivers.php">
+            <a href="https://super.shippii.online/users/drivers.php">
               <i class="bi bi-circle"></i><span>Drivers</span>
             </a>
           </li>
 		   <li>
-            <a href="https://new.shippii.online/super/users/customers.php">
+            <a href="https://super.shippii.online/users/customers.php">
               <i class="bi bi-circle"></i><span>Customers</span>
             </a>
           </li>
