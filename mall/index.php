@@ -62,6 +62,44 @@ require_once '../scripts/connection.php';
 
   <main id="main" class="main">
 
+
+
+  <div class="modal fade" id="modalDialogScrollable" tabindex="-1">
+                <div class="modal-dialog modal-dialog-scrollable">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Add New Mall</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      
+			<form class="row g-3" method="post" action="" autocomplete="off">
+			    <div class="col-md-12">
+                  <input type="text" class="form-control" placeholder="id" name="id" id="use" autocomplete="new-text" required readonly>
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" placeholder="Shop Name" name="name" id="name" autocomplete="new-text" required>
+                </div>
+				<div class="col-md-12">
+                  <input type="text" class="form-control" placeholder="link" autocomplete="new-password" id="password" name="link" required>
+                </div>
+             
+				
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary" name="savenew">Save</button>
+                  <button type="reset" class="btn btn-secondary">Clear</button>
+                  <button type="submit" class="btn btn-danger" name="delete" id="delete" >Delete</button>
+				  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+              </form><!-- End No Labels Form -->
+					  
+					  
+                    </div>
+                   
+                  </div>
+                </div>
+              </div><!-- End Modal Dialog Scrollable-->
+
     <div class="pagetitle">
       <h1>Manage Malls</h1>
       <nav>
@@ -85,7 +123,7 @@ require_once '../scripts/connection.php';
               </div>
               <!-- Table with stripped rows -->
 <div class="col-md-6 text-end">
-              <button style="margin-top: 10px; margin-bottom: 10px;" type="button" data-link="" title="View" class="btn btn-success edit" data-id=""><i class="bi bi-plus-square-fill"></i>New Shop</button>
+              <button style="margin-top: 10px; margin-bottom: 10px;" type="button" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable" data-link="" title="View" class="btn btn-success edit" data-id=""><i class="bi bi-plus-square-fill"></i>New Shop</button>
               </div>
               </div>
                <div class="table-responsive">
