@@ -266,6 +266,8 @@ $(document).on("click",".edit",function(e){
             'csvHtml5',
             'pdfHtml5'
         ],
+
+        responsive: true,
         
        
         
