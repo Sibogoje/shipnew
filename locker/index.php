@@ -227,7 +227,7 @@ $(document).on("click",".edit",function(e){
 </html>
 <?php
 }else{
-    header('Location: https://fairlife.liquag.com/fair/index.php');
+    header('Location: https://super.shippii.online');
 }
 
 ?>
