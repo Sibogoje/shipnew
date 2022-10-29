@@ -234,7 +234,7 @@ $(document).on("click",".edit",function(e){
 </html>
 <?php
 }else{
-    header('Location: https://super.shippii.online');
+    header('Location: https://super.shippii.online/logout.php');
 }
 
 ?>

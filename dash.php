@@ -518,7 +518,7 @@ $sum2 = $row2['PARCEL'];
 </html>
 <?php
 }else{
-    header('Location: index.php');
+  header('Location: https://super.shippii.online/logout.php');
 }
 
 ?>

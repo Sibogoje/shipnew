@@ -463,7 +463,7 @@ $('#single2').select2({
 </html>
 <?php
 }else{
-    header('Location: https://super.shippii.online');
+    header('Location: https://super.shippii.online/logout.php');
 }
 
 ?>
