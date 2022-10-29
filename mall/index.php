@@ -6,7 +6,41 @@ if(isset($_SESSION['zid']))
 $gg = $_SESSION['user'];
 require_once '../scripts/connection.php';
 
+if (isset($_POST['savenew'])){
+	
+  $name = $_POST['name'];
+  $link = $_POST['link'];
+  
+  
+  $stmt = $conn->prepare("REPLACE into mall (
+    `name`,
+    `link`,
 
+  )
+  
+  VALUES
+    (
+  
+
+      ?,
+      ?
+      
+  
+    );");
+  $stmt->bind_param("ss",
+
+  $name,
+  $link
+  );
+  $stmt->execute();
+  
+  //echo "New records created successfully";
+  header ('Location: local.php');
+  $stmt->close();
+  $conn->close();
+  }else{
+  
+  }
 
 ?>
 <html lang="en">
@@ -123,7 +157,7 @@ require_once '../scripts/connection.php';
               </div>
               <!-- Table with stripped rows -->
 <div class="col-md-6 text-end">
-              <button style="margin-top: 10px; margin-bottom: 10px;" type="button" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable" data-link="" title="View" class="btn btn-success" data-id=""><i class="bi bi-plus-square"></i>Add New</button>
+              <button style="margin-top: 10px; margin-bottom: 10px;" name="savenew" type="submit" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable" data-link="" title="View" class="btn btn-success" data-id=""><i class="bi bi-plus-square"></i>Add New</button>
               </div>
               </div>
                <div class="table-responsive">
