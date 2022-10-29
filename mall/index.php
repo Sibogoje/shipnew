@@ -79,7 +79,7 @@ require_once '../scripts/connection.php';
               </div>
               <!-- Table with stripped rows -->
 <div class="col-md-6 text-end">
-              <button style="margin-top: 10px; margin-bottom: 10px;" type="button" data-link="" title="View" class="btn btn-warning edit" data-id=""><i class="bi bi-eye-fill"></i>New Shop</button>
+              <button style="margin-top: 10px; margin-bottom: 10px;" type="button" data-link="" title="View" class="btn btn-success edit" data-id=""><i class="bi bi-plus-square-fill"></i>New Shop</button>
               </div>
               </div>
                <div class="table-responsive">
