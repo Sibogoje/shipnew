@@ -277,7 +277,7 @@ while($row = $result->fetch_assoc()) {
 });
 });
 */
-$(document).on("click",".edit",function(e){
+$(document).on("click",".editss",function(e){
  // your code goes here
   window.location.href = $(this).data('link');
 });
