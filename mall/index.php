@@ -96,7 +96,7 @@ if (isset($_POST['savenew'])){
                       
 			<form class="row g-3" method="post" action="" autocomplete="off">
 			    <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="id" name="id" id="id" autocomplete="new-text" required readonly>
+                  <input type="text" class="form-control" placeholder="id" name="id" id="use" autocomplete="new-text" required readonly>
                 </div>
                 <div class="col-md-12">
                   <input type="text" class="form-control" placeholder="Shop Name" name="name" id="name" autocomplete="new-text" required>
