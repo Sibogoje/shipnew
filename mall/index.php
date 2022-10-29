@@ -92,7 +92,7 @@ require_once '../scripts/connection.php';
                 </thead>
                 <tbody>
         <?php 
-$stmt = $conn->prepare("SELECT * FROM `mall_shops`");
+$stmt = $conn->prepare("SELECT * FROM `mall`");
 
 $stmt->execute();
 $result = $stmt->get_result();
@@ -104,12 +104,12 @@ while($row = $result->fetch_assoc()) {
 
 ?>
                   <tr>
-                    <th scope="row"><?php echo $row['shopid']; ?></th>
-                    <td><?php echo $row['store_name']; ?></td>
-                    <td><?php echo $row['logo'];  ?></td>
-                    <td><?php echo $row['url']; ?></td>
+                    <th scope="row"><?php echo $row['id']; ?></th>
+                    <td><?php echo $row['name']; ?></td>
+                    <td><?php echo $row['link'];  ?></td>
+                    <td><?php echo $row['logo']; ?></td>
           <td>
-      <button type="button" data-link="dedit.php?id=<?php echo $row['shopid']; ?>" title="View" class="btn btn-warning edit" data-id="<?php echo $row['shopid']; ?>"><i class="bi bi-eye-fill"></i></button>
+      <button type="button" data-link="dedit.php?id=<?php echo $row['id']; ?>" title="View" class="btn btn-warning edit" data-id="<?php echo $row['id']; ?>"><i class="bi bi-eye-fill"></i></button>
               
           </td>
           
