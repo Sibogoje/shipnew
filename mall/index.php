@@ -35,7 +35,7 @@ if (isset($_POST['savenew'])){
   $stmt->execute();
   
   //echo "New records created successfully";
-  header ('Location: local.php');
+  header ('Location: index.php');
   $stmt->close();
   $conn->close();
   }else{
