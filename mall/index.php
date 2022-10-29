@@ -78,7 +78,7 @@ require_once '../scripts/connection.php';
               <h5 class="card-title">All Orders</h5>
               </div>
               <!-- Table with stripped rows -->
-<div class="col-md-6 text-right">
+<div class="col-md-6 align-right">
               <button style="align: right;" type="button" data-link="" title="View" class="btn btn-warning edit" data-id=""><i class="bi bi-eye-fill"></i>New Shop</button>
               </div>
               </div>
