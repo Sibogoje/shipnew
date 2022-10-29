@@ -11,7 +11,7 @@ require_once 'scripts/connection.php';
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Shippii Admins</title>
+  <title>Shippii Admin Final</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 <script src='jquery-3.2.1.min.js' type='text/javascript'></script>
