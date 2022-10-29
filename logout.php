@@ -7,7 +7,7 @@ if(isset($_SESSION['zid']))
 $session = 0;
 $sessionid = $_SESSION['zid'];
 $userid = $_SESSION['xid'];
-echo $userid." ".$sessionid;
+//echo $userid." ".$sessionid;
 $login = date('Y-m-d H:m:s');
 $updatesession = $conn->prepare("UPDATE sysuser SET session=?, status=? WHERE id=? ");
 $updatesession->bind_param("sss", $session, $login, $userid);
