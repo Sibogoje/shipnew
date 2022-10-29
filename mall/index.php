@@ -77,7 +77,7 @@ require_once '../scripts/connection.php';
               <h5 class="card-title">All Orders</h5>
               <!-- Table with stripped rows -->
 
-              <button type="button" data-link="" title="View" class="btn btn-warning edit" data-id=""><i class="bi bi-eye-fill"></i>Add New</button>
+              <button style="align: right;" type="button" data-link="" title="View" class="btn btn-warning edit" data-id=""><i class="bi bi-eye-fill"></i>Add New</button>
               </div>
                <div class="table-responsive">
               <table class="table datatable" id="jj">
