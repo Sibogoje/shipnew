@@ -9,7 +9,7 @@ $sessionid = $_SESSION['zid'];
 $userid = $_SESSION['xid'];
 //echo $userid." ".$sessionid;
 $login = date('Y-m-d H:m:s');
-$updatesession = $conn->prepare("UPDATE sysuser SET session=?, status=? WHERE id=? ");
+$updatesession = $conn->prepare("UPDATE sysuser SET session=?, last_login=? WHERE id=? ");
 $updatesession->bind_param("sss", $session, $login, $userid);
 $updatesession->execute();
 
