@@ -142,7 +142,7 @@ if (isset($_POST['savenew'])){
               <button style="margin-top: 10px; margin-bottom: 10px;" type="button" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable" data-link="" title="View" class="btn btn-success" data-id=""><i class="bi bi-plus-square"></i>Add New</button>
               </div>
               </div>
-               <div class="table-responsive">
+               <div class="table responsive">
                <table class="table table-striped datatable nowrap" id="jj" style="width: 100%;" >
                 <thead>
                   <tr>
@@ -224,12 +224,7 @@ while($row = $result->fetch_assoc()) {
 
 
 <script src="../assets/js/main.js"></script>
-
-
-
-    <script src=""></script>
-    <script src=""></script>
-    
+   
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
@@ -252,6 +247,8 @@ $(document).on("click",".edit",function(e){
   window.location.href = $(this).data('link');
 });
 </script>
+
+
 <script>
   $(document).ready(function() {
     $('#jj').DataTable( {
@@ -266,17 +263,11 @@ $(document).on("click",".edit",function(e){
             'csvHtml5',
             'pdfHtml5'
         ],
-
         responsive: true,
-        
-       
-        
-    } );
-    
-  
 } );
+});
 </script>
-</script>
+
 </body>
 
 </html>
