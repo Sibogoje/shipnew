@@ -73,7 +73,7 @@ require_once '../scripts/connection.php';
 
           <div class="card">
             <div class="card-body">
-              <div style="100%;" class="d-flex"> 
+              <div style="100%;" class="d-flex w100"> 
               <div>
               <h5 class="card-title">All Orders</h5>
               </div>
