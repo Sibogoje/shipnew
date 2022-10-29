@@ -181,7 +181,7 @@ while($row = $result->fetch_assoc()) {
   <button type="button"  class="btn btn-outline-primary edit"  title="Edit" 
 			data-id="<?php echo $row['id']; ?>"
 			data-name="<?php echo $row['name']; ?>"
-			data-link="<?php echo $row['link']; ?>"
+			data-links="<?php echo $row['link']; ?>"
 
 			data-bs-toggle="modal" data-bs-target="#modalDialogScrollable"
 			><i class="bi bi-eye"></i></button>
@@ -253,7 +253,7 @@ while($row = $result->fetch_assoc()) {
        // alert('clickeds');
        var id = $(this).data("id");
        var name = $(this).data("name");
-       var link = $(this).data("link");
+       var links = $(this).data("links");
 
       
       
@@ -261,7 +261,7 @@ while($row = $result->fetch_assoc()) {
        $('#name').val(name);
  
        $('#use').val(id);
-        $('#link').val(link);
+        $('#link').val(links);
        
        
        
