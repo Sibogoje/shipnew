@@ -12,28 +12,10 @@ if (isset($_POST['savenew'])){
   $link = $_POST['link'];
   
   
-  $stmt = $conn->prepare("REPLACE into mall (
-    `name`,
-    `link`,
-
-  )
-  
-  VALUES
-    (
-  
-
-      ?,
-      ?
-      
-  
-    );");
-  $stmt->bind_param("ss",
-
-  $name,
-  $link
-  );
+  $stmt = $conn->prepare("REPLACE into mall ( `name`, `link`)VALUES ( ?,?);");
+  $stmt->bind_param("ss", $name, $link);
   $stmt->execute();
-  
+
   //echo "New records created successfully";
   header ('Location: index.php');
   $stmt->close();
@@ -109,18 +91,18 @@ if (isset($_POST['savenew'])){
                       
 			<form class="row g-3" method="post" action="" autocomplete="off">
 			    <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="id" name="id" id="use" autocomplete="new-text" required readonly>
+                  <input type="text" class="form-control" placeholder="id" name="id" id="id" autocomplete="new-text" required readonly>
                 </div>
                 <div class="col-md-12">
                   <input type="text" class="form-control" placeholder="Shop Name" name="name" id="name" autocomplete="new-text" required>
                 </div>
 				<div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="link" autocomplete="new-password" id="password" name="link" required>
+                  <input type="text" class="form-control" placeholder="link" autocomplete="new-text" id="link" name="link" required>
                 </div>
              
 				
                 <div class="text-center">
-                  <button type="submit" class="btn btn-primary" name="savenew">Save</button>
+                  <button type="submit" class="btn btn-primary" name="savenew">Add</button>
                   <button type="reset" class="btn btn-secondary">Clear</button>
                   <button type="submit" class="btn btn-danger" name="delete" id="delete" >Delete</button>
 				  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
