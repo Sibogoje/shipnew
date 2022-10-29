@@ -38,7 +38,7 @@ if (isset($_POST['savenew'])){
     <link href="../icon.png" rel="icon">
   <link href="../icon.png" rel="apple-touch-icon">
 
-  
+
   <script src=" https://code.jquery.com/jquery-3.5.1.js"></script>
 
 
@@ -178,7 +178,13 @@ while($row = $result->fetch_assoc()) {
                     <td><?php echo $row['link'];  ?></td>
                     <td><?php echo $row['logo']; ?></td>
           <td>
-      <button type="button" data-link="dedit.php?id=<?php echo $row['id']; ?>" title="View" class="btn btn-warning edit" data-id="<?php echo $row['id']; ?>"><i class="bi bi-eye-fill"></i></button>
+  <button type="button" data-link="edit.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-primary edit"  title="Edit" 
+			data-id="<?php echo $row['id']; ?>"
+			data-name="<?php echo $row['name']; ?>"
+			data-link="<?php echo $row['link']; ?>"
+
+			data-bs-toggle="modal" data-bs-target="#modalDialogScrollable"
+			><i class="bi bi-eye"></i></button>
               
           </td>
           
@@ -238,7 +244,31 @@ while($row = $result->fetch_assoc()) {
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
     <script src="../assets/vendor/simple-datatables/simple-datatables.js"></script>
 
+    <script>
+    
+    $('.edit').click(function(){
+        
+        $('#delete').show();
+        
+       // alert('clickeds');
+       var id = $(this).data("id");
+       var name = $(this).data("name");
+       var link = $(this).data("link");
 
+      
+      
+       
+       $('#name').val(name);
+ 
+       $('#use').val(id);
+        $('#link').val(link);
+       
+       
+       
+        
+    });
+    
+</script>	
 <script>
 //$(document).ready(function(){
 /*	
