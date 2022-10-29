@@ -73,11 +73,12 @@ require_once '../scripts/connection.php';
 
           <div class="card">
             <div class="card-body">
+              <div style="100%;">
               <h5 class="card-title">All Orders</h5>
               <!-- Table with stripped rows -->
 
               <button type="button" data-link="" title="View" class="btn btn-warning edit" data-id=""><i class="bi bi-eye-fill"></i>Add New</button>
-        
+              </div>
                <div class="table-responsive">
               <table class="table datatable" id="jj">
                 <thead>
@@ -116,7 +117,7 @@ while($row = $result->fetch_assoc()) {
                   </tr>
 <?php   }
 } else {
-  echo "0 results";
+ // echo "0 results";
 } ?>                 
                 </tbody>
               </table>
