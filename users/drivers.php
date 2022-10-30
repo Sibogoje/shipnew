@@ -202,7 +202,7 @@ if (isset($_POST['savenew'])){
                 </thead>
                 <tbody>
         <?php 
-$stmt = $conn->prepare("SELECT * FROM `mall`");
+$stmt = $conn->prepare("SELECT * FROM `drivers`");
 
 $stmt->execute();
 $result = $stmt->get_result();
