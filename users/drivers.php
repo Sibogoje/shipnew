@@ -121,7 +121,7 @@ if (isset($_POST['savenew'])){
 				  <select type="text" class="form-control" id="company"    placeholder="company" name="company"  required>
 					<option value="" selected></option>
 						<?php 
-						$stmt12 = $conn->prepare("SELECT * FROM `partner_companies` order by id");
+						$stmt12 = $conn->prepare("SELECT * FROM `partner_companies` ");
 						$stmt12->execute();
 						$result12 = $stmt12->get_result();
 						if ($result12->num_rows > 0) {
