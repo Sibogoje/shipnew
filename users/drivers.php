@@ -115,6 +115,7 @@ if (isset($_POST['savenew'])){
                 </div>
 
                 <div class="col-md-12">
+                <label for="floatingName">Company:</label>
 				  <select type="text" class="form-control" id="company"    placeholder="company" name="company"  required>
 					<option value="" selected></option>
 						<?php 
@@ -130,7 +131,7 @@ if (isset($_POST['savenew'])){
 						  //echo "0 results";
 						} ?> 
 					</select>
-                     <label for="floatingName">Company:</label>
+                     
 				</div>
 
 
