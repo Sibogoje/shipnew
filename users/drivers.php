@@ -26,7 +26,7 @@ if (isset($_POST['savenew'])){
   
   }
   if (isset($_POST['delete'])){
-	  $id = $_POST['use'];
+	  $id = $_POST['id'];
     $stmt = $conn->prepare("DELETE FROM `drivers` where `id`='$id' ");
     $stmt->execute();
     

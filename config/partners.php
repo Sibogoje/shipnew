@@ -7,7 +7,7 @@ $gg = $_SESSION['user'];
 require_once '../scripts/connection.php';
 
 if (isset($_POST['savenew'])){
-  $id = $_POST['use'];
+  $id = $_POST['id'];
   $name = $_POST['name'];
   $address = $_POST['address'];
   $email = $_POST['email'];
