@@ -115,7 +115,6 @@ if (isset($_POST['savenew'])){
                 </div>
 
                 <div class="col-md-12">
-				<div class="form-floating">
 				  <select type="text" class="form-control" id="company"    placeholder="company" name="company"  required>
 					<option value="" selected></option>
 						<?php 
@@ -124,9 +123,7 @@ if (isset($_POST['savenew'])){
 						$result12 = $stmt12->get_result();
 						if ($result12->num_rows > 0) {
 						  // output data of each row
-						while($row12 = $result12->fetch_assoc()) {
-
-					    ?>
+						while($row12 = $result12->fetch_assoc()) { ?>
 					<option value="<?php echo $row12['id']; ?>"><?php echo $row12['name']?></option>
 						<?php   }
 						} else {
@@ -134,11 +131,7 @@ if (isset($_POST['savenew'])){
 						} ?> 
 					</select>
                      <label for="floatingName">Company:</label>
-				  <div class="valid-feedback">
-                    Looks good!
-                  </div>
-                  </div>
-				  </div>
+				</div>
 
 
 
