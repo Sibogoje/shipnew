@@ -17,7 +17,7 @@ if (isset($_POST['savenew'])){
   
   
   $stmt = $conn->prepare("REPLACE into partner_companies (`id`,  `name`, `address`, `email`, `phone`, `type`)VALUES ( ?,?,?,?,?,?);");
-  $stmt->bind_param("ssssss",  $id,  $name,   $address, $email, $phone,   $type);
+  $stmt->bind_param("ssssss",  $id,  $name,   $address, $email, $phone, $type);
   $stmt->execute();
 
   //echo "New records created successfully";
@@ -121,13 +121,13 @@ if (isset($_POST['savenew'])){
                   <input type="text" class="form-control" placeholder="Address" autocomplete="new-text" id="address" name="address" required>
                 </div>
                 <div class="col-md-12">
-                  <input type="phone" class="form-control" placeholder="Phone" autocomplete="new-text" id="phone" name="link" required>
+                  <input type="phone" class="form-control" placeholder="Phone" autocomplete="new-text" id="phone" name="phone" required>
                 </div>
                 <div class="col-md-12">
                   <input type="email" class="form-control" placeholder="Email" autocomplete="new-text" id="email" name="email" required>
                 </div>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Type of Business" autocomplete="new-text" id="type" name="link" required>
+                  <input type="text" class="form-control" placeholder="Type of Business" autocomplete="new-text" id="type" name="type" required>
                 </div>
              
 				
