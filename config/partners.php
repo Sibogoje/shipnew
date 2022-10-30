@@ -7,17 +7,21 @@ $gg = $_SESSION['user'];
 require_once '../scripts/connection.php';
 
 if (isset($_POST['savenew'])){
-	
+  $id = $_POST['use'];
   $name = $_POST['name'];
-  $link = $_POST['link'];
+  $address = $_POST['address'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];
+  $type = $_POST['type'];
+
   
   
-  $stmt = $conn->prepare("REPLACE into mall ( `name`, `link`)VALUES ( ?,?);");
-  $stmt->bind_param("ss", $name, $link);
+  $stmt = $conn->prepare("REPLACE into partner_companies (`id`,  `name`, `address`, `email`, `phone`, `type`)VALUES ( ?,?,?,?,?,?);");
+  $stmt->bind_param("ssssss",  $id,  $name,   $address, $email, $phone,   $type);
   $stmt->execute();
 
   //echo "New records created successfully";
-  header ('Location: index.php');
+  header ('Location: partners.php');
   $stmt->close();
   $conn->close();
   }else{
@@ -25,11 +29,11 @@ if (isset($_POST['savenew'])){
   }
   if (isset($_POST['delete'])){
 	  $id = $_POST['id'];
-    $stmt = $conn->prepare("DELETE FROM `mall` where `id`='$id' ");
+    $stmt = $conn->prepare("DELETE FROM `partner_companies` where `id`='$id' ");
     $stmt->execute();
     
     //echo "New records created successfully";
-    header ('Location: index.php');
+    header ('Location: partners.php');
     $stmt->close();
     $conn->close();
     }else{
@@ -111,10 +115,19 @@ if (isset($_POST['savenew'])){
                   <input type="text" class="form-control" placeholder="id" name="id" id="use" autocomplete="new-text" required readonly>
                 </div>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Shop Name" name="name" id="name" autocomplete="new-text" required>
+                  <input type="text" class="form-control" placeholder="Partner Name" name="name" id="name" autocomplete="new-text" required>
                 </div>
 				<div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="link" autocomplete="new-text" id="link" name="link" required>
+                  <input type="text" class="form-control" placeholder="Address" autocomplete="new-text" id="address" name="address" required>
+                </div>
+                <div class="col-md-12">
+                  <input type="phone" class="form-control" placeholder="Phone" autocomplete="new-text" id="phone" name="link" required>
+                </div>
+                <div class="col-md-12">
+                  <input type="email" class="form-control" placeholder="Email" autocomplete="new-text" id="email" name="email" required>
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" placeholder="Type of Business" autocomplete="new-text" id="type" name="link" required>
                 </div>
              
 				
@@ -164,16 +177,18 @@ if (isset($_POST['savenew'])){
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Store Name</th>
-                    <th scope="col">Link</th>
-                    <th scope="col">Logo</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Type</th>
                     
           <th scope="col" >Action</th>
                   </tr>
                 </thead>
                 <tbody>
         <?php 
-$stmt = $conn->prepare("SELECT * FROM `mall`");
+$stmt = $conn->prepare("SELECT * FROM `partner_companies`");
 
 $stmt->execute();
 $result = $stmt->get_result();
@@ -187,13 +202,18 @@ while($row = $result->fetch_assoc()) {
                   <tr>
                     <th scope="row"><?php echo $row['id']; ?></th>
                     <td><?php echo $row['name']; ?></td>
-                    <td><?php echo $row['link'];  ?></td>
-                    <td><?php echo $row['logo']; ?></td>
+                    <td><?php echo $row['address'];  ?></td>
+                    <td><?php echo $row['phone']; ?></td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['type']; ?></td>
           <td>
   <button type="button"  class="btn btn-outline-primary edit"  title="Edit" 
 			data-id="<?php echo $row['id']; ?>"
 			data-name="<?php echo $row['name']; ?>"
-			data-links="<?php echo $row['link']; ?>"
+			data-address="<?php echo $row['address']; ?>"
+      data-phone="<?php echo $row['phone']; ?>"
+      data-email="<?php echo $row['email']; ?>"
+      data-type="<?php echo $row['type']; ?>"
 
 			data-bs-toggle="modal" data-bs-target="#modalDialogScrollable"
 			><i class="bi bi-eye"></i></button>
@@ -265,15 +285,17 @@ while($row = $result->fetch_assoc()) {
        // alert('clickeds');
        var id = $(this).data("id");
        var name = $(this).data("name");
-       var links = $(this).data("links");
+       var type = $(this).data("type");
+       var email = $(this).data("email");
+       var phone = $(this).data("phone");
+       var address = $(this).data("address");
 
-      
-      
-       
        $('#name').val(name);
- 
        $('#use').val(id);
-        $('#link').val(links);
+        $('#type').val(type);
+        $('#email').val(email);
+        $('#phone').val(phone);
+        $('#address').val(address);
        
        
        

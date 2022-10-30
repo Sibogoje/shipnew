@@ -7,15 +7,15 @@ $gg = $_SESSION['user'];
 require_once '../scripts/connection.php';
 
 if (isset($_POST['savenew'])){
-	
+    $id = $_POST['use'];
   $name = $_POST['name'];
   $company = $_POST['company'];
   $email = $_POST['email'];
   $password = $_POST['password'];
   
   
-  $stmt = $conn->prepare("REPLACE into drivers ( `name`, `comapany`, `email`, `password`)VALUES ( ?,?, ?, ?);");
-  $stmt->bind_param("ssss", $name, $company, $email, $password);
+  $stmt = $conn->prepare("REPLACE into drivers (`id`, `name`, `company`, `email`, `password`)VALUES ( ?,?, ?, ?, ?);");
+  $stmt->bind_param("sssss", $id, $name, $company, $email, $password);
   $stmt->execute();
 
   //echo "New records created successfully";
@@ -26,7 +26,7 @@ if (isset($_POST['savenew'])){
   
   }
   if (isset($_POST['delete'])){
-	  $id = $_POST['id'];
+	  $id = $_POST['use'];
     $stmt = $conn->prepare("DELETE FROM `drivers` where `id`='$id' ");
     $stmt->execute();
     
