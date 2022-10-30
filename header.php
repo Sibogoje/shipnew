@@ -366,12 +366,17 @@
 
           <li>
             <a href="https://super.shippii.online/config/calculator.php">
-              <i class="bi bi-circle"></i><span>Calculator</span>
+              <i class="bi bi-calculator"></i><span>Calculator</span>
             </a>
           </li>
 		   <li>
            <a href="https://super.shippii.online/config/promotions.php">
-              <i class="bi bi-circle"></i><span>Promotions</span>
+              <i class="bi bi-wallet-fill"></i><span>Promotions</span>
+            </a>
+          </li>
+          <li>
+           <a href="https://super.shippii.online/config/partners.php">
+              <i class="bi bi-union"></i><span>Partner Companies</span>
             </a>
           </li>
 
