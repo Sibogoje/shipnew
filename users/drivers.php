@@ -43,7 +43,7 @@ if (isset($_POST['savenew'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Shippii Mall</title>
+  <title>Driver Management</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
     <!-- Favicons -->
@@ -56,7 +56,7 @@ if (isset($_POST['savenew'])){
 
   <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/jq-3.6.0/dt-1.12.1/b-2.2.3/b-html5-2.2.3/b-print-2.2.3/date-1.1.2/fh-3.2.4/r-2.3.0/rg-1.2.0/sc-2.0.7/sb-1.3.4/sp-2.0.2/sl-1.4.0/datatables.min.js"></script>
 
-
+  <link href='select2/dist/css/select2.min.css' rel='stylesheet' type='text/css'>
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -101,7 +101,7 @@ if (isset($_POST['savenew'])){
                 <div class="modal-dialog modal-dialog-scrollable">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title">Add New Mall</h5>
+                      <h5 class="modal-title">Add New Driver</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -111,10 +111,39 @@ if (isset($_POST['savenew'])){
                   <input type="text" class="form-control" placeholder="id" name="id" id="use" autocomplete="new-text" required readonly>
                 </div>
                 <div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="Shop Name" name="name" id="name" autocomplete="new-text" required>
+                  <input type="text" class="form-control" placeholder="Driver Name" name="name" id="name" autocomplete="new-text" required>
                 </div>
+
+                <div class="col-md-12">
+				<div class="form-floating">
+				  <select type="text" class="form-control" id="company"    placeholder="company" name="company"  required>
+					<option value="" selected></option>
+						<?php 
+						$stmt12 = $conn->prepare("SELECT * FROM `partner_companies` order by id");
+						$stmt12->execute();
+						$result12 = $stmt12->get_result();
+						if ($result12->num_rows > 0) {
+						  // output data of each row
+						while($row12 = $result12->fetch_assoc()) {
+
+					    ?>
+					<option value="<?php echo $row12['id']; ?>"><?php echo $row12['name']?></option>
+						<?php   }
+						} else {
+						  //echo "0 results";
+						} ?> 
+					</select>
+                     <label for="floatingName">Company:</label>
+				  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  </div>
+				  </div>
+
+
+
 				<div class="col-md-12">
-                  <input type="text" class="form-control" placeholder="link" autocomplete="new-text" id="link" name="link" required>
+                  <input type="email" class="form-control" placeholder="Driver Email" autocomplete="new-email" id="link" name="email" required>
                 </div>
              
 				
@@ -134,11 +163,11 @@ if (isset($_POST['savenew'])){
               </div><!-- End Modal Dialog Scrollable-->
 
     <div class="pagetitle">
-      <h1>Manage Malls</h1>
+      <h1>Manage Drivers</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-          <li class="breadcrumb-item active">Mall</li>
+          <li class="breadcrumb-item active">Drivers</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -156,7 +185,7 @@ if (isset($_POST['savenew'])){
               </div>
               <!-- Table with stripped rows -->
 <div class="col-md-6 text-end">
-              <button style="margin-top: 10px; margin-bottom: 10px;" type="button" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable" data-link="" title="View" class="btn btn-success" data-id=""><i class="bi bi-plus-square"></i>Add New</button>
+              <button style="margin-top: 10px; margin-bottom: 10px;" type="button" data-bs-toggle="modal" data-bs-target="#modalDialogScrollable" data-link="" title="View" class="btn btn-success" data-id=""><i class="bi bi-car-front"></i>Add New Driver</button>
               </div>
               </div>
                <div class="table responsive">
@@ -280,15 +309,25 @@ while($row = $result->fetch_assoc()) {
         
     });
     
-</script>	
+</script>
+
 <script>
-//$(document).ready(function(){
-/*	
-	$('.edit').click(function(){
-   window.location.href = $(this).data('link');
+$(document).ready(function(){
+
+
+$('#company').select2({
+    width: '100%',
+    allowClear: false,
+    height: '100%',
 });
+
+
+
 });
-*/
+</script>
+
+
+<script>
 $(document).on("click",".editss",function(e){
  // your code goes here
   window.location.href = $(this).data('link');
