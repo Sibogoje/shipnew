@@ -9,15 +9,17 @@ require_once '../scripts/connection.php';
 if (isset($_POST['savenew'])){
 	
   $name = $_POST['name'];
-  $link = $_POST['link'];
+  $company = $_POST['company'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
   
   
-  $stmt = $conn->prepare("REPLACE into mall ( `name`, `link`)VALUES ( ?,?);");
-  $stmt->bind_param("ss", $name, $link);
+  $stmt = $conn->prepare("REPLACE into drivers ( `name`, `comapany`, `email`, `password`)VALUES ( ?,?, ?, ?);");
+  $stmt->bind_param("ssss", $name, $company, $email, $password);
   $stmt->execute();
 
   //echo "New records created successfully";
-  header ('Location: index.php');
+  header ('Location: drivers.php');
   $stmt->close();
   $conn->close();
   }else{
@@ -25,7 +27,7 @@ if (isset($_POST['savenew'])){
   }
   if (isset($_POST['delete'])){
 	  $id = $_POST['id'];
-    $stmt = $conn->prepare("DELETE FROM `mall` where `id`='$id' ");
+    $stmt = $conn->prepare("DELETE FROM `drivers` where `id`='$id' ");
     $stmt->execute();
     
     //echo "New records created successfully";
@@ -137,7 +139,10 @@ if (isset($_POST['savenew'])){
 
 
 				<div class="col-md-12">
-                  <input type="email" class="form-control" placeholder="Driver Email" autocomplete="new-email" id="link" name="email" required>
+                  <input type="email" class="form-control" placeholder="Driver Email" autocomplete="new-email" id="email" name="email" required>
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" placeholder="Password" autocomplete="new-email" id="password" name="password" required>
                 </div>
              
 				
@@ -187,9 +192,10 @@ if (isset($_POST['savenew'])){
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Store Name</th>
-                    <th scope="col">Link</th>
-                    <th scope="col">Logo</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Password</th>
                     
           <th scope="col" >Action</th>
                   </tr>
@@ -210,13 +216,16 @@ while($row = $result->fetch_assoc()) {
                   <tr>
                     <th scope="row"><?php echo $row['id']; ?></th>
                     <td><?php echo $row['name']; ?></td>
-                    <td><?php echo $row['link'];  ?></td>
-                    <td><?php echo $row['logo']; ?></td>
+                    <td><?php echo $row['company'];  ?></td>
+                    <td><?php echo $row['email']; ?></td>
+                    <td><?php echo $row['password']; ?></td>
           <td>
   <button type="button"  class="btn btn-outline-primary edit"  title="Edit" 
 			data-id="<?php echo $row['id']; ?>"
 			data-name="<?php echo $row['name']; ?>"
-			data-links="<?php echo $row['link']; ?>"
+			data-company="<?php echo $row['company']; ?>"
+            data-email="<?php echo $row['email']; ?>"
+            data-password="<?php echo $row['password']; ?>"
 
 			data-bs-toggle="modal" data-bs-target="#modalDialogScrollable"
 			><i class="bi bi-eye"></i></button>
@@ -288,7 +297,10 @@ while($row = $result->fetch_assoc()) {
        // alert('clickeds');
        var id = $(this).data("id");
        var name = $(this).data("name");
-       var links = $(this).data("links");
+       
+       var company = $(this).data("company");
+       var email = $(this).data("email");
+       var password = $(this).data("password");
 
       
       
@@ -296,7 +308,9 @@ while($row = $result->fetch_assoc()) {
        $('#name').val(name);
  
        $('#use').val(id);
-        $('#link').val(links);
+        $('#company').val(company);
+        $('#email').val(email);
+        $('#password').val(password);
        
        
        
